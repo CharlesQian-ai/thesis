@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Slide 1</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #f8f9fa;
+            position: relative;
+            background-image: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 86, 179, 0.95)), url('images/abstract-blue-technology-network-background.jpg');
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .title { font-size: 56px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; max-width: 90%; }
+        .subtitle { font-size: 32px; font-weight: 400; margin-bottom: 60px; opacity: 0.9; }
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 30px 60px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .info-text { font-size: 24px; margin: 10px 0; font-weight: 300; }
+        .info-label { font-weight: 600; margin-right: 10px; }
+        .cqu-logo {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            width: 260px;
+            z-index: 10;
+            filter: brightness(0) invert(1); /* 转为白色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="title">基于空间-频域协同与极性感知的<br>文本引导目标计数研究</div>
+        <div class="subtitle">硕士学位论文开题报告</div>
+        
+        <div class="info-box">
+            <div class="info-text"><span class="info-label">汇报人:</span> 钱城</div>
+            <div class="info-text"><span class="info-label">指导教师:</span> 桑军</div>
+            <div class="info-text"><span class="info-label">日期:</span> 2026年1月</div>
+        </div>
+    </div>
+</body>
+</html>

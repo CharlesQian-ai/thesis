@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>硕士学位论文答辩材料 - 钱城</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+        .header {
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 32px;
+            color: #0056b3;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #6c757d;
+        }
+        .nav-grid {
+            display: grid;
+            gap: 20px;
+        }
+        .nav-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 30px;
+            background: #ffffff;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .nav-card:hover {
+            border-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1);
+        }
+        .card-info {
+            text-align: left;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 4px;
+        }
+        .card-status {
+            font-size: 14px;
+            color: #adb5bd;
+        }
+        .card-icon {
+            font-size: 24px;
+            color: #0056b3;
+        }
+        
+        .nav-card.disabled {
+            background: #f1f3f5;
+            border-color: #f1f3f5;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        .nav-card.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        .nav-card.disabled .card-title { color: #adb5bd; }
+        .nav-card.disabled .card-icon { color: #dee2e6; }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #adb5bd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">硕士学位论文答辩材料</div>
+            <div class="subtitle">研究生：钱城 | 导师：桑军</div>
+        </div>
+
+        <div class="nav-grid">
+            <!-- 开题答辩 -->
+            <a href="proposal/thesis_proposal_ppt/slides/slide1.html" class="nav-card">
+                <div class="card-info">
+                    <div class="card-title">开题答辩 (Proposal)</div>
+                    <div class="card-status">2026年1月 | 已完成</div>
+                </div>
+                <div class="card-icon">➜</div>
+            </a>
+
+            <!-- 中期答辩 (占位) -->
+            <div class="nav-card disabled">
+                <div class="card-info">
+                    <div class="card-title">中期检查 (Midterm)</div>
+                    <div class="card-status">预计 2026年6月</div>
+                </div>
+                <div class="card-icon">🔒</div>
+            </div>
+
+            <!-- 毕业答辩 (占位) -->
+            <div class="nav-card disabled">
+                <div class="card-info">
+                    <div class="card-title">毕业答辩 (Defense)</div>
+                    <div class="card-status">预计 2027年4月</div>
+                </div>
+                <div class="card-icon">🔒</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 重庆大学计算机学院
+        </div>
+    </div>
+</body>
+</html>

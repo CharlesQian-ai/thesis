@@ -1,0 +1,262 @@
+[
+  {
+    "query": "abstract blue tech background for academic presentation",
+    "image_info": {
+      "url": "https://t4.ftcdn.net/jpg/08/92/76/05/360_F_892760501_4rLSTytMDBeDXCZs09qOeluyT23eX1Mv.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 32347,
+      "width": 573,
+      "height": 360,
+      "total_pixels": 206280,
+      "basic_score": 0.7479116690386675,
+      "file_name": "abstract-blue-technology-network-background.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is an excellent match for the query, perfectly capturing the 'abstract blue technology' theme. Its clean, professional aesthetic is ideal for an academic presentation background. The composition provides ample negative space for text, the clarity is good for a digital graphic, and there are no watermarks.",
+      "file_name": "abstract-blue-technology-network-background.jpg",
+      "caption": "An abstract technology background featuring a network of interconnected white nodes and lines, glowing against a soft, cool-toned blue and gray gradient. The background is enhanced with subtle bokeh light effects, creating a sense of depth and digital space.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "abstract blue tech background for academic presentation",
+    "image_info": {
+      "url": "https://images.presentationgo.com/2025/04/blue-technology-wave-background.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 167944,
+      "width": 1285,
+      "height": 720,
+      "total_pixels": 925200,
+      "basic_score": 0.9366077795390991,
+      "file_name": "abstract-blue-tech-particle-wave-background.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 70.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is an excellent match for the query, perfectly capturing the abstract, blue, and technology themes suitable for an academic presentation background. The composition and color palette are professional and engaging. The only minor drawback is the slightly low resolution, which affects its sharpness, but it's still very usable for digital presentations. There are no watermarks.",
+      "file_name": "abstract-blue-tech-particle-wave-background.jpg",
+      "caption": "An abstract digital art background featuring a flowing, wave-like structure composed of countless glowing blue particles. The wave undulates across a dark navy blue background, accented with out-of-focus bokeh lights in shades of blue, pink, and purple, creating a sense of depth and movement. The image evokes concepts of technology, data flow, and digital networks.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "computer vision object counting example",
+    "image_info": {
+      "url": "https://www.anolytics.ai/upload/1697094668_bounding-boxes-in-annotation.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 187820,
+      "width": 1200,
+      "height": 585,
+      "total_pixels": 702000,
+      "basic_score": 0.8926575179610626,
+      "file_name": "computer-vision-vehicle-tracking-bounding-boxes.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect visual representation of the search query, clearly demonstrating computer vision, object counting/tracking (implied by the vehicle IDs), and bounding boxes in a real-world traffic scenario. The clarity is good, allowing details of the cars and overlays to be seen. There are no watermarks, and the overall composition is excellent for a technical illustration.",
+      "file_name": "computer-vision-vehicle-tracking-bounding-boxes.jpg",
+      "caption": "A high-angle photograph of a busy street intersection with a computer vision overlay demonstrating object detection and tracking. Various cars, vans, and trucks are enclosed in colored bounding boxes (blue and red), each with a unique identifier like 'Vehicle 1001', showcasing an AI or machine learning system analyzing traffic flow in real-time.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "computer vision object counting example",
+    "image_info": {
+      "url": "https://www.labelvisor.com/content/images/size/w1200/2023/12/Screenshot_14.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 2211910,
+      "width": 1200,
+      "height": 715,
+      "total_pixels": 858000,
+      "basic_score": 0.8551988214498539,
+      "file_name": "computer-vision-object-counting-highway-traffic.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is perfectly relevant to the search query, providing an excellent visual example of computer vision object counting with bounding boxes in a real-world scenario (traffic on a highway). The clarity is sufficient to understand the concept, though it appears to be a frame from a video feed rather than a high-resolution photograph. There are no watermarks. The overall quality is high for its purpose as a technical illustration, making it a prime example.",
+      "file_name": "computer-vision-object-counting-highway-traffic.jpg",
+      "caption": "An illustrative example of computer vision for object counting, showing a multi-lane highway from a high-angle perspective. An object detection model has identified multiple cars on the road, drawing bright green bounding boxes around each vehicle to signify detection and enable counting for traffic analysis.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "computer vision object counting example",
+    "image_info": {
+      "url": "https://miro.medium.com/1*ZW_uBZFtdMKb6kSL2Otrsw.jpeg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 94713,
+      "width": 852,
+      "height": 480,
+      "total_pixels": 408960,
+      "basic_score": 0.8292780014203323,
+      "file_name": "computer-vision-object-detection-street-scene.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 65.0,
+      "watermark_score": 100.0,
+      "overall_score": 80.0,
+      "explanation": "The image is a perfect visual representation for the search query, clearly demonstrating object detection with bounding boxes in a real-world computer vision application. While its relevance is absolute, the image itself is of average resolution and clarity, with some noticeable pixelation. There are no watermarks present. Despite the moderate clarity, its illustrative value is extremely high.",
+      "file_name": "computer-vision-object-detection-street-scene.jpg",
+      "caption": "A demonstration of computer vision for object detection and counting on a busy city street. Multi-colored bounding boxes are overlaid on the image to identify various objects: pedestrians and a dog are highlighted, as are cars, traffic lights, and street signs. This serves as an excellent example of AI-powered image analysis.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "computer vision object counting example",
+    "image_info": {
+      "url": "https://ayadata.ai/wp-content/uploads/2025/03/643d3e14830acf7531e34dd7_jlRL2JgCuc-ROFcM6h_QkfHmITj4l7TuWwZnEGOEFhxJlIFoBTSxbrqp26mkzEIeWrjBxWN-Om8r8TS1ewQDDFtUTyTYZnG7uokHNha35Ee2zWttv7rYexl9dFbxqI1eY5t37gHcNRzACBFApUpYATY-768x515-1.webp",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 117526,
+      "width": 768,
+      "height": 515,
+      "total_pixels": 395520,
+      "basic_score": 0.8385138145361953,
+      "file_name": "computer-vision-object-detection-cars-bounding-boxes.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 55.0,
+      "watermark_score": 100.0,
+      "overall_score": 78.0,
+      "explanation": "The image is a perfect illustration for the query, accurately showing computer vision object detection with bounding boxes on cars. Its relevance is maximum. However, the image suffers from low resolution and noticeable pixelation, which brings down its clarity score. There are no watermarks. Despite the poor clarity, its high conceptual relevance makes it very useful for its intended purpose.",
+      "file_name": "computer-vision-object-detection-cars-bounding-boxes.jpg",
+      "caption": "An illustrative example of computer vision and object detection, showing a high-angle view of a multi-lane road with traffic. Each car is identified and enclosed within a yellow bounding box labeled 'CAR', demonstrating how an AI model recognizes and tracks objects for applications like traffic monitoring and object counting.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "computer vision object counting example",
+    "image_info": {
+      "url": "https://cdn.sanity.io/images/31qskqlc/production/7efded788704af633479ae5745b5411c3712222d-1080x608.webp?fit=max&auto=format",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 103411,
+      "width": 1080,
+      "height": 608,
+      "total_pixels": 656640,
+      "basic_score": 0.8942906921734374,
+      "file_name": "computer-vision-object-counting-bounding-boxes.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 60.0,
+      "watermark_score": 100.0,
+      "overall_score": 75.0,
+      "explanation": "The image is perfectly relevant to the search query, serving as an excellent example of computer vision with object counting and bounding boxes in a real-world traffic scene. The clarity is moderate, appearing to be a frame from a video with some noticeable compression and lack of sharpness. The image is completely free of watermarks. Overall, it's a highly effective illustration for technical or educational purposes, though it is not a high-quality photograph.",
+      "file_name": "computer-vision-object-counting-bounding-boxes.jpg",
+      "caption": "A demonstration of computer vision object detection on a busy city street. Colorful 2D and 3D bounding boxes highlight various objects for tracking and counting: cars are outlined in teal, a large bus and two cyclists are outlined in yellow and magenta, and traffic lights and signs are boxed in green and purple. This image illustrates how AI systems can identify and categorize multiple objects simultaneously in a complex environment.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "neural network schema diagram white background",
+    "image_info": {
+      "url": "https://miro.medium.com/1*kQtbGWZgi3n35Qojkg8cFw.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 21662,
+      "width": 731,
+      "height": 482,
+      "total_pixels": 352342,
+      "basic_score": 0.7920961027662771,
+      "file_name": "convolutional_neural_network_architecture_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "This image is a perfect match for the search query. It provides a clear, high-resolution, and professionally designed diagram of a convolutional neural network architecture. The use of color-coding and a legend makes it easy to understand, and the absence of watermarks adds to its usability. It's an excellent visual aid for explaining neural network structures.",
+      "file_name": "convolutional_neural_network_architecture_diagram.jpg",
+      "caption": "A schematic diagram illustrating the architecture of a deep convolutional neural network (CNN), similar to a VGG-style network. The diagram shows the flow of data through sequential layers, starting with an input layer and progressing through convolutional (conv1-conv5), max pooling, fully connected (fc6-fc8), and a final softmax layer. Dimensions of the data tensors are provided at key stages, and a color-coded legend distinguishes between convolutional + ReLU, max pooling, fully connected + ReLU, and softmax layers.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "neural network schema diagram white background",
+    "image_info": {
+      "url": "https://ik.imagekit.io/upgrad1/abroad-images/imageCompo/images/ChatGPT_Image_Nov_20_2025_03_47_56_PMTT18DE.png",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 105842,
+      "width": 1536,
+      "height": 1024,
+      "total_pixels": 1572864,
+      "basic_score": 0.8605649973597863,
+      "file_name": "neural-network-architecture-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 97.0,
+      "explanation": "The image is an excellent and highly relevant educational diagram that perfectly matches the search query. It clearly illustrates the architecture of a neural network with distinct layers, a detailed node explanation, and a helpful key. The clarity is high, the composition is professional and easy to understand, and there are no watermarks. This is a top-quality graphic for any educational or technical use case.",
+      "file_name": "neural-network-architecture-diagram.jpg",
+      "caption": "A clear and informative diagram illustrating the architecture of a neural network on a white background. The diagram shows a multi-layer perceptron with an input layer (green nodes), a hidden layer (blue nodes), and an output layer (red nodes). It also includes a close-up of a single node, explaining how inputs are combined with weights, processed by an activation function, and produce an output. A color-coded key on the right clarifies the different layers.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "neural network schema diagram white background",
+    "image_info": {
+      "url": "https://preview.redd.it/pjj39fhl1pc61.png?width=640&format=png&auto=webp&s=37fd1d99b4bf9aa2ff64975ba64daa52a3a141f4",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 69564,
+      "width": 640,
+      "height": 376,
+      "total_pixels": 240640,
+      "basic_score": 0.7574826883066347,
+      "file_name": "feedforward_neural_network_architecture_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image is a highly relevant and clear diagram of a neural network architecture, perfectly matching the user's prompt. Clarity is good, with legible text and sharp lines, though minor compression artifacts are visible upon close inspection. The image is completely free of watermarks. The overall composition is excellent, presenting a standard and easy-to-understand schema, making it highly suitable for professional or educational use.",
+      "file_name": "feedforward_neural_network_architecture_diagram.jpg",
+      "caption": "A clear, schematic diagram illustrating the architecture of a feedforward neural network on a white background. The diagram is divided into three sections by dotted lines: an Input layer, Hidden layers, and an Output layer. It shows 'n' inputs feeding into multiple fully connected hidden layers (h1, h2, ... hn). The final hidden layer connects to an Output layer with 'n' outputs. This type of diagram is commonly used to explain the structure of deep learning models.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]

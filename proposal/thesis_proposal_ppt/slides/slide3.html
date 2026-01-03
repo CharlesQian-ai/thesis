@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Slide 3</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+        .top-bar {
+            position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3;
+        }
+        .slide-title {
+            font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 40px;
+            border-bottom: 2px solid #e9ecef; padding-bottom: 15px;
+        }
+        .content-flex {
+            display: flex; gap: 40px; height: 500px;
+        }
+        .text-col { flex: 1.2; display: flex; flex-direction: column; gap: 25px; }
+        .img-col { flex: 0.8; display: flex; flex-direction: column; justify-content: center; }
+        
+        .point-card {
+            background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #0056b3;
+        }
+        .point-title { font-size: 22px; font-weight: 700; color: #343a40; margin-bottom: 8px; }
+        .point-desc { font-size: 18px; color: #495057; line-height: 1.4; }
+        
+        .image-container {
+            border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-height: 450px; /* 限制最大高度，防止溢出 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f9fa;
+        }
+        .image-container img { 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
+            display: block; 
+        }
+        .caption { font-size: 14px; color: #6c757d; text-align: center; margin-top: 10px; }
+        
+        .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+        .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">1. 研究背景与意义</div>
+
+        <div class="content-flex">
+            <div class="text-col">
+                <div class="point-card">
+                    <div class="point-title">目标计数的重要性</div>
+                    <div class="point-desc">广泛应用于公共安全监控、交通流量管理、城市规划及生态监测等领域，是计算机视觉的核心任务。</div>
+                </div>
+                <div class="point-card">
+                    <div class="point-title">传统方法的局限性</div>
+                    <div class="point-desc">现有全监督方法依赖大量标注数据，且对新颖类别的泛化能力较差，难以适应开放世界场景。</div>
+                </div>
+                <div class="point-card">
+                    <div class="point-title">零样本目标计数的价值</div>
+                    <div class="point-desc">无需预定义类别训练，通过文本或范例引导实现计数，具有极高的理论研究价值和实际部署潜力。</div>
+                </div>
+            </div>
+            
+            <div class="img-col">
+                <div class="image-container">
+                    <img src="images/crowd.png" alt="Object Counting Example">
+                </div>
+                <div class="caption">图：高密度人群场景下的目标计数应用</div>
+            </div>
+        </div>
+        
+        <div class="footer">3 / 11</div>
+    </div>
+</body>
+</html>

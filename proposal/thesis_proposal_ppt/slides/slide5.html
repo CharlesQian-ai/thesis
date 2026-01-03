@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Slide 5</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+        .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+        .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+        
+        .content-wrapper { display: flex; gap: 40px; height: 520px; }
+        
+        .left-panel { flex: 1.1; }
+        .right-panel { 
+            flex: 0.9; 
+            background: #f8f9fa; 
+            border-radius: 12px; 
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .scheme-badge {
+            display: inline-block; background: #0056b3; color: white; padding: 5px 15px; border-radius: 20px; font-size: 16px; margin-bottom: 15px;
+        }
+        .scheme-title { font-size: 28px; font-weight: 700; color: #212529; margin-bottom: 30px; }
+        
+        .feature-box {
+            margin-bottom: 25px; padding-left: 20px; border-left: 4px solid #00a651;
+        }
+        .feature-name { font-size: 22px; font-weight: 600; color: #343a40; margin-bottom: 5px; }
+        .feature-detail { font-size: 18px; color: #6c757d; line-height: 1.4; }
+        
+        .diagram-placeholder {
+            width: 100%; height: 300px;
+            background: white;
+            border-radius: 8px;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .diagram-caption { font-size: 14px; color: #6c757d; text-align: center; }
+        
+        .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+        .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">3. 研究内容与方案 (1/2)</div>
+
+        <div class="content-wrapper">
+            <div class="left-panel">
+                <div class="scheme-badge">方案一</div>
+                <div class="scheme-title">AMS-Counter: 空间-频率域多视角融合</div>
+                
+                <div class="feature-box">
+                    <div class="feature-name">多视角特征融合模块 (AMFFM)</div>
+                    <div class="feature-detail">
+                        同时提取图像的空间域纹理特征与频率域频谱特征，解决复杂背景下的目标混淆问题。
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-name">无偏快速傅里叶卷积 (UFFC)</div>
+                    <div class="feature-detail">
+                        利用FFT全局感受野特性，捕捉全局密度分布，克服局部卷积在密集场景下的局限性。
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-name">自适应跳过连接 (ASC)</div>
+                    <div class="feature-detail">
+                        动态调节深层语义与浅层细节的融合比例，增强对小目标的感知能力。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="diagram-placeholder">
+                    <img src="images/ams.png" style="width:90%; height:auto;" alt="Neural Network Structure">
+                </div>
+                <div class="diagram-caption">图：AMS-Counter 基础网络架构示意</div>
+            </div>
+        </div>
+        
+        <div class="footer">5 / 11</div>
+    </div>
+</body>
+</html>

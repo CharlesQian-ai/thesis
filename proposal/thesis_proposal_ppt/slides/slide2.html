@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Slide 2</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            background-image: url('images/abstract-blue-technology-network-background.jpg');
+            background-size: 100% 150px; /* Header strip */
+            background-repeat: no-repeat;
+        }
+        .header { 
+            height: 100px; 
+            display: flex; 
+            align-items: center; 
+            color: white; 
+            margin-bottom: 40px; 
+            position: relative; /* 确保内容在蒙版之上 */
+            z-index: 2;
+        }
+        .slide-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px; /* 覆盖背景图区域 */
+            background-image: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 86, 179, 0.95)); /* 与首页一致的渐变 */
+            z-index: 1;
+        }
+        .page-title { font-size: 42px; font-weight: 700; }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .toc-item {
+            background: #f8f9fa;
+            border-left: 6px solid #0056b3;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            color: #212529;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .toc-num {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0056b3;
+            margin-right: 20px;
+            width: 40px;
+        }
+        .footer {
+            position: absolute; bottom: 20px; right: 40px; color: #6c757d; font-size: 14px;
+        }
+        .cqu-logo {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            width: 200px;
+            z-index: 10;
+            filter: brightness(0) invert(1); /* 转为白色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="header">
+            <div class="page-title">目录 CONTENTS</div>
+        </div>
+
+        <div class="content-grid">
+            <div class="toc-item"><span class="toc-num">01</span>研究背景与意义</div>
+            <div class="toc-item"><span class="toc-num">02</span>国内外研究现状</div>
+            <div class="toc-item"><span class="toc-num">03</span>研究内容与方案</div>
+            <div class="toc-item"><span class="toc-num">04</span>技术路线与实施</div>
+            <div class="toc-item"><span class="toc-num">05</span>预期成果与创新</div>
+            <div class="toc-item"><span class="toc-num">06</span>研究基础与条件</div>
+            <div class="toc-item"><span class="toc-num">07</span>总结与展望</div>
+        </div>
+
+        <div class="footer">2 / 11</div>
+    </div>
+</body>
+</html>

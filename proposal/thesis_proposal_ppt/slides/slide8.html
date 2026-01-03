@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Slide 8</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+        .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+        .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 40px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+        
+        .columns { display: flex; gap: 40px; height: 480px; }
+        
+        .col {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        
+        .col-header {
+            font-size: 28px; font-weight: 700; color: #212529; margin-bottom: 25px;
+            display: flex; align-items: center;
+        }
+        .icon-box {
+            width: 40px; height: 40px; background: #0056b3; color: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 20px;
+        }
+        
+        .list-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .bullet {
+            min-width: 10px; height: 10px; background: #00a651; border-radius: 50%; margin-top: 8px; margin-right: 15px;
+        }
+        .text { font-size: 20px; color: #495057; line-height: 1.4; }
+        .highlight { color: #0056b3; font-weight: 600; }
+
+        .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+        .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">5. 预期成果与创新点</div>
+
+        <div class="columns">
+            <div class="col">
+                <div class="col-header">
+                    <div class="icon-box">★</div>
+                    主要创新点
+                </div>
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="text">提出<span class="highlight">空间-频率域协同</span>机制，突破单一视角特征提取的局限性。</div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="text">设计<span class="highlight">极性感知双向注意力</span>，解决零样本计数中的定位漂移问题。</div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="text">构建<span class="highlight">渐进式训练策略</span>，显著提升模型在少样本/零样本场景下的收敛速度。</div>
+                </div>
+            </div>
+
+            <div class="col" style="background: #e3f2fd;">
+                <div class="col-header">
+                    <div class="icon-box" style="background:#00a651;">✓</div>
+                    预期成果
+                </div>
+                <div class="list-item">
+                    <div class="bullet" style="background:#0056b3;"></div>
+                    <div class="text">构建基于多视角融合的零样本计数框架 (AMS-Counter / PolaCount)。</div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet" style="background:#0056b3;"></div>
+                    <div class="text">发表高水平学术论文 2-2 篇 (CCF推荐会议/期刊)。</div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet" style="background:#0056b3;"></div>
+                    <div class="text">申请国家发明专利 2 项。</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">8 / 11</div>
+    </div>
+</body>
+</html>
