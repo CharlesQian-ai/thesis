@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Slide Experiment</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+        .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+        .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+        
+        .content-flex {
+            display: flex;
+            gap: 40px;
+            height: 520px;
+        }
+
+        .left-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-col {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #dee2e6;
+        }
+
+        .data-card {
+            background: #fff;
+            border-left: 5px solid #0056b3;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .d-title { font-size: 20px; font-weight: 700; color: #212529; margin-bottom: 10px; }
+        .d-info { font-size: 16px; color: #6c757d; margin-bottom: 5px; }
+        .d-badge {
+            display: inline-block; background: #e7f5ff; color: #0056b3; padding: 2px 8px; border-radius: 4px; font-size: 14px; font-weight: 600; margin-right: 5px;
+        }
+
+        .metric-box {
+            margin-bottom: 30px;
+        }
+        .m-header { font-size: 22px; font-weight: 700; color: #343a40; margin-bottom: 15px; border-bottom: 1px solid #dee2e6; padding-bottom: 10px; }
+        
+        .formula-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px dashed #adb5bd;
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .metric-desc {
+            font-size: 16px; color: #495057; line-height: 1.5;
+        }
+
+        .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+        .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">3.3 实验设置与评估体系</div>
+
+        <div class="content-flex">
+            <!-- Left: Datasets -->
+            <div class="left-col">
+                <div class="m-header" style="border:none; padding:0; margin-bottom:5px;">📚 实验数据集</div>
+                
+                <div class="data-card">
+                    <div class="d-title">FSC-147 (Few-Shot Counting)</div>
+                    <div class="d-info"><span class="d-badge">核心</span> 包含147个类别，6135张图像。</div>
+                    <div class="d-info">特点：类别丰富，跨度大，专为少样本/零样本设计。</div>
+                </div>
+
+                <div class="data-card" style="border-left-color: #17a2b8;">
+                    <div class="d-title">CARPK (Car Parking Lot)</div>
+                    <div class="d-info"><span class="d-badge">泛化</span> 包含近90,000辆汽车的航拍图像。</div>
+                    <div class="d-info">用途：验证模型在特定密集场景下的跨域泛化能力。</div>
+                </div>
+
+                <div class="data-card" style="border-left-color: #6f42c1;">
+                    <div class="d-title">ShanghaiTech (Crowd Counting)</div>
+                    <div class="d-info"><span class="d-badge">挑战</span> 高密度人群计数数据集。</div>
+                    <div class="d-info">用途：测试模型在极端拥挤场景下的鲁棒性。</div>
+                </div>
+            </div>
+
+            <!-- Right: Metrics -->
+            <div class="right-col">
+                <div class="metric-box">
+                    <div class="m-header">📏 评估指标</div>
+                    
+                    <div style="font-weight:600; margin-bottom:10px; color:#212529;">1. 平均绝对误差 (MAE)</div>
+                    <div class="formula-box">
+                        MAE = (1/N) * Σ | P_i - G_i |
+                    </div>
+                    <div class="metric-desc">衡量预测值与真实值之间的平均偏差，反映计数的准确性。</div>
+                </div>
+
+                <div class="metric-box">
+                    <div style="font-weight:600; margin-bottom:10px; color:#212529;">2. 均方根误差 (RMSE)</div>
+                    <div class="formula-box">
+                        RMSE = √ [ (1/N) * Σ (P_i - G_i)^2 ]
+                    </div>
+                    <div class="metric-desc">对大误差更敏感，反映计数的稳定性与鲁棒性。</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">8 / 13</div>
+    </div>
+</body>
+</html>

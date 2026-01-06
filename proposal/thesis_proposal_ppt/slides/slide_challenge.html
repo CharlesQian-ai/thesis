@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Slide Challenge</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+        .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+        .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+        
+        .challenge-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 520px;
+            justify-content: center;
+        }
+
+        .challenge-row {
+            display: flex;
+            align-items: stretch;
+            height: 140px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .c-left {
+            width: 35%;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            border-right: 1px solid #dee2e6;
+            position: relative;
+        }
+
+        .c-left::after {
+            content: "➔";
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            color: #adb5bd;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .c-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #d63384; /* Challenge Color */
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .c-desc {
+            font-size: 16px;
+            color: #6c757d;
+            line-height: 1.4;
+        }
+
+        .c-right {
+            width: 65%;
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+        }
+
+        .s-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #00a651; /* Solution Color */
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .s-desc {
+            font-size: 16px;
+            color: #495057;
+            line-height: 1.4;
+        }
+
+        .icon { margin-right: 10px; font-size: 22px; }
+
+        .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+        .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">2.2 核心挑战与应对策略</div>
+
+        <div class="challenge-container">
+            <!-- Row 1 -->
+            <div class="challenge-row">
+                <div class="c-left">
+                    <div class="c-title"><span class="icon">⚠️</span> 语义对齐偏差</div>
+                    <div class="c-desc">视觉特征与文本描述之间存在语义鸿沟，易将背景误判为目标。</div>
+                </div>
+                <div class="c-right">
+                    <div class="s-title"><span class="icon">🛡️</span> 极性感知与双向交互</div>
+                    <div class="s-desc">引入正负样本对比机制，构建视觉-文本双向信息流，锐化语义边界，精准抑制背景噪声。</div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="challenge-row">
+                <div class="c-left">
+                    <div class="c-title"><span class="icon">📉</span> 密集场景特征混淆</div>
+                    <div class="c-desc">高密度区域目标重叠严重，传统CNN局部卷积难以捕捉全局分布。</div>
+                </div>
+                <div class="c-right">
+                    <div class="s-title"><span class="icon">🌊</span> 空间-频域协同感知</div>
+                    <div class="s-desc">引入频域（FFT）信息，利用频谱卷积的全局感受野特性，从全局视角辅助密集区域的计数。</div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="challenge-row">
+                <div class="c-left">
+                    <div class="c-title"><span class="icon">🔍</span> 尺度变化剧烈</div>
+                    <div class="c-desc">自然场景中目标大小不一，小目标在深层网络中易丢失细节信息。</div>
+                </div>
+                <div class="c-right">
+                    <div class="s-title"><span class="icon">🏗️</span> 多尺度金字塔结构</div>
+                    <div class="s-desc">采用特征金字塔（FPN）与自适应跳过连接，融合深层语义与浅层细节，确保各尺度目标均可被捕获。</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">5 / 13</div>
+    </div>
+</body>
+</html>
