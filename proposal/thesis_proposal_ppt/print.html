@@ -1,0 +1,1441 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>开题答辩PPT - 打印版 (无边框)</title>
+    <style>
+        /* 全局重置 */
+        * { box-sizing: border-box; }
+        
+        html, body { 
+            margin: 0; 
+            padding: 0; 
+            background: white; 
+            width: 100%;
+        }
+        
+        /* 预览时的容器 */
+        .print-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+
+        /* 每一页幻灯片 */
+        .slide-page {
+            width: 1280px;
+            height: 720px;
+            background: white;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            
+            /* 强制分页 */
+            page-break-after: always;
+            break-after: page;
+        }
+
+        /* 打印专用样式 */
+        @media print {
+            /* 
+               关键设置：定义页面尺寸为幻灯片原尺寸 (1280px x 720px)
+               这会让 "另存为 PDF" 直接生成该尺寸的文档，从而没有白边。
+            */
+            @page {
+                size: 1280px 720px;
+                margin: 0;
+            }
+
+            .print-container {
+                padding: 0;
+                background: white;
+                display: block;
+            }
+            
+            body {
+                background: white;
+                margin: 0;
+            }
+
+            .slide-page {
+                margin: 0;
+                box-shadow: none;
+                border: none;
+                width: 1280px;
+                height: 720px;
+                
+                page-break-inside: avoid;
+                page-break-after: always;
+                break-after: page;
+
+                /* 不再需要缩放，因为页面尺寸已经匹配内容 */
+                zoom: 1; 
+                
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .slide-page:last-child {
+                page-break-after: auto;
+                break-after: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-container">
+
+        <!-- Slide 1: slide1.html -->
+        <div class="slide-page" id="slide-1">
+            <style>
+#slide-1 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-1 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #f8f9fa;
+            position: relative;
+            background-image: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 86, 179, 0.95)), url('slides/images/abstract-blue-technology-network-background.jpg');
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+#slide-1 .title { font-size: 56px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; max-width: 90%; }
+#slide-1 .subtitle { font-size: 32px; font-weight: 400; margin-bottom: 60px; opacity: 0.9; }
+#slide-1 .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 30px 60px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+#slide-1 .info-text { font-size: 24px; margin: 10px 0; font-weight: 300; }
+#slide-1 .info-label { font-weight: 600; margin-right: 10px; }
+#slide-1 .cqu-logo {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            width: 260px;
+            z-index: 10;
+            filter: brightness(0) invert(1); 
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="title">基于空间-频域协同与极性感知的<br>文本引导目标计数研究</div>
+        <div class="subtitle">硕士学位论文开题报告</div>
+        
+        <div class="info-box">
+            <div class="info-text"><span class="info-label">汇报人:</span> 钱城</div>
+            <div class="info-text"><span class="info-label">指导教师:</span> 桑军</div>
+            <div class="info-text"><span class="info-label">日期:</span> 2026年1月</div>
+        </div>
+    </div>
+
+        </div>
+
+        <!-- Slide 2: slide2.html -->
+        <div class="slide-page" id="slide-2">
+            <style>
+#slide-2 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-2 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            background-image: url('slides/images/abstract-blue-technology-network-background.jpg');
+            background-size: 100% 150px; 
+            background-repeat: no-repeat;
+        }
+#slide-2 .header { 
+            height: 100px; 
+            display: flex; 
+            align-items: center; 
+            color: white; 
+            margin-bottom: 40px; 
+            position: relative; 
+            z-index: 2;
+        }
+#slide-2 .slide-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px; 
+            background-image: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 86, 179, 0.95)); 
+            z-index: 1;
+        }
+#slide-2 .page-title { font-size: 42px; font-weight: 700; }
+#slide-2 .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+#slide-2 .toc-item {
+            background: #f8f9fa;
+            border-left: 6px solid #0056b3;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: #212529;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+#slide-2 .toc-num {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0056b3;
+            margin-right: 15px;
+            width: 35px;
+        }
+#slide-2 .footer {
+            position: absolute; bottom: 20px; right: 40px; color: #6c757d; font-size: 14px;
+        }
+#slide-2 .cqu-logo {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            width: 200px;
+            z-index: 10;
+            filter: brightness(0) invert(1); 
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="header">
+            <div class="page-title">目录 CONTENTS</div>
+        </div>
+
+        <div class="content-grid">
+            <div class="toc-item"><span class="toc-num">01</span>研究背景与意义</div>
+            <div class="toc-item"><span class="toc-num">02</span>国内外研究现状与挑战</div>
+            <div class="toc-item"><span class="toc-num">03</span>研究内容与方案</div>
+            <div class="toc-item"><span class="toc-num">04</span>技术路线与实施</div>
+            <div class="toc-item"><span class="toc-num">05</span>预期成果与创新</div>
+            <div class="toc-item"><span class="toc-num">06</span>研究基础与条件</div>
+            <div class="toc-item"><span class="toc-num">07</span>年度研究计划</div>
+        </div>
+
+        <div class="footer">2 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 3: slide3.html -->
+        <div class="slide-page" id="slide-3">
+            <style>
+#slide-3 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-3 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-3 .top-bar {
+            position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3;
+        }
+#slide-3 .slide-title {
+            font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 40px;
+            border-bottom: 2px solid #e9ecef; padding-bottom: 15px;
+        }
+#slide-3 .content-flex {
+            display: flex; gap: 40px; height: 500px;
+        }
+#slide-3 .text-col { flex: 1.2; display: flex; flex-direction: column; gap: 25px; }
+#slide-3 .img-col { flex: 0.8; display: flex; flex-direction: column; justify-content: center; }
+#slide-3 .point-card {
+            background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #0056b3;
+        }
+#slide-3 .point-title { font-size: 22px; font-weight: 700; color: #343a40; margin-bottom: 8px; }
+#slide-3 .point-desc { font-size: 18px; color: #495057; line-height: 1.4; }
+#slide-3 .image-container {
+            border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-height: 450px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f9fa;
+        }
+#slide-3 .image-container img { 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
+            display: block; 
+        }
+#slide-3 .caption { font-size: 14px; color: #6c757d; text-align: center; margin-top: 10px; }
+#slide-3 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-3 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">1. 研究背景与意义</div>
+
+        <div class="content-flex">
+            <div class="text-col">
+                <div class="point-card">
+                    <div class="point-title">目标计数的重要性</div>
+                    <div class="point-desc">广泛应用于公共安全监控、交通流量管理、城市规划及生态监测等领域，是计算机视觉的核心任务。</div>
+                </div>
+                <div class="point-card">
+                    <div class="point-title">传统方法的局限性</div>
+                    <div class="point-desc">现有全监督方法依赖大量标注数据，且对新颖类别的泛化能力较差，难以适应开放世界场景。</div>
+                </div>
+                <div class="point-card">
+                    <div class="point-title">零样本目标计数的价值</div>
+                    <div class="point-desc">无需预定义类别训练，通过文本或范例引导实现计数，具有极高的理论研究价值和实际部署潜力。</div>
+                </div>
+            </div>
+            
+            <div class="img-col">
+                <div class="image-container">
+                    <img src="slides/images/crowd.png" alt="Object Counting Example">
+                </div>
+                <div class="caption">图：高密度人群场景下的目标计数应用</div>
+            </div>
+        </div>
+        
+        <div class="footer">3 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 4: slide4.html -->
+        <div class="slide-page" id="slide-4">
+            <style>
+#slide-4 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-4 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-4 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-4 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+#slide-4 .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; 
+            height: 520px; 
+        }
+#slide-4 .matrix-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            height: 100%; 
+            width: 70%;
+        }
+#slide-4 .illustration-placeholder {
+            width: 32%;
+            height: 100%; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #adb5bd;
+        }
+#slide-4 .illustration-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+#slide-4 .matrix-card {
+            background: #f1f3f5; border-radius: 8px; padding: 25px;
+            display: flex; flex-direction: column;
+            border-top: 4px solid #adb5bd;
+        }
+#slide-4 .matrix-card.highlight { background: #e7f5ff; border-top: 4px solid #0056b3; }
+#slide-4 .card-header { font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #343a40; display: flex; justify-content: space-between; }
+.card-#slide-4 { font-size: 18px; color: #495057; line-height: 1.5; }
+#slide-4 .ref-tag { font-size: 14px; background: #dee2e6; padding: 2px 8px; border-radius: 4px; color: #495057; }
+#slide-4 .problem-box {
+            margin-top: 20px; padding: 15px; background: #fff3cd; border: 1px solid #ffeeba; border-radius: 6px; color: #856404; font-size: 18px; font-weight: 500; text-align: center;
+        }
+#slide-4 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-4 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">2.1 国内外研究现状</div>
+
+        <div class="content-wrapper">
+            <div class="matrix-grid">
+            <div class="matrix-card">
+                <div class="card-header">特定类型计数</div>
+                <div class="card-body">
+                    <ul>
+                        <li>针对特定类别（人群、车辆、细胞）优化</li>
+                        <li>依赖大规模特定领域数据集</li>
+                        <li>泛化性差，跨域性能显著下降</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="matrix-card">
+                <div class="card-header">少样本/无参照计数 <span class="ref-tag">GMN, FamNet</span></div>
+                <div class="card-body">
+                    <ul>
+                        <li>利用少量范例（Exemplars）进行匹配</li>
+                        <li>减少了标注需求，但仍需人工干预</li>
+                        <li>对范例质量极其敏感</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="matrix-card highlight">
+                <div class="card-header" style="color:#0056b3">零样本目标计数 <span class="ref-tag" style="background:#cce5ff;color:#004085">CLIP-Count, VLCounter</span></div>
+                <div class="card-body">
+                    <ul>
+                        <li>基于视觉-语言大模型（CLIP）</li>
+                        <li>无需样本，仅需文本描述</li>
+                        <li><strong>当前痛点：</strong>语义对齐偏差，定位精度不足</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                 <div class="card-header">现有问题总结</div>
+                 <div class="card-body">
+                    1. <strong>多模态融合不足</strong>：文本与视觉特征交互简单。<br>
+                    2. <strong>尺度变化敏感</strong>：小目标在频域信息易丢失。<br>
+                    3. <strong>定位与计数不匹配</strong>：极性感知能力弱。
+                 </div>
+            </div>
+        </div>
+        
+        <div class="illustration-placeholder">
+                <img src="slides/images/p1.drawio.png" alt="研究现状示意图">
+            </div>
+        </div>
+        
+        <div class="footer">4 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 5: slide_challenge.html -->
+        <div class="slide-page" id="slide-5">
+            <style>
+#slide-5 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-5 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-5 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-5 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+#slide-5 .challenge-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 520px;
+            justify-content: center;
+        }
+#slide-5 .challenge-row {
+            display: flex;
+            align-items: stretch;
+            height: 140px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+#slide-5 .c-left {
+            width: 35%;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            border-right: 1px solid #dee2e6;
+            position: relative;
+        }
+#slide-5 .c-left::after {
+            content: "➔";
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            color: #adb5bd;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+            font-size: 14px;
+            z-index: 2;
+        }
+#slide-5 .c-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #d63384; 
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+#slide-5 .c-desc {
+            font-size: 16px;
+            color: #6c757d;
+            line-height: 1.4;
+        }
+#slide-5 .c-right {
+            width: 65%;
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+        }
+#slide-5 .s-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #00a651; 
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+#slide-5 .s-desc {
+            font-size: 16px;
+            color: #495057;
+            line-height: 1.4;
+        }
+#slide-5 .icon { margin-right: 10px; font-size: 22px; }
+#slide-5 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-5 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">2.2 核心挑战与应对策略</div>
+
+        <div class="challenge-container">
+            <!-- Row 1 -->
+            <div class="challenge-row">
+                <div class="c-left">
+                    <div class="c-title"><span class="icon">⚠️</span> 语义对齐偏差</div>
+                    <div class="c-desc">视觉特征与文本描述之间存在语义鸿沟，易将背景误判为目标。</div>
+                </div>
+                <div class="c-right">
+                    <div class="s-title"><span class="icon">🛡️</span> 极性感知与双向交互</div>
+                    <div class="s-desc">引入正负样本对比机制，构建视觉-文本双向信息流，锐化语义边界，精准抑制背景噪声。</div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="challenge-row">
+                <div class="c-left">
+                    <div class="c-title"><span class="icon">📉</span> 密集场景特征混淆</div>
+                    <div class="c-desc">高密度区域目标重叠严重，传统CNN局部卷积难以捕捉全局分布。</div>
+                </div>
+                <div class="c-right">
+                    <div class="s-title"><span class="icon">🌊</span> 空间-频域协同感知</div>
+                    <div class="s-desc">引入频域（FFT）信息，利用频谱卷积的全局感受野特性，从全局视角辅助密集区域的计数。</div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="challenge-row">
+                <div class="c-left">
+                    <div class="c-title"><span class="icon">🔍</span> 尺度变化剧烈</div>
+                    <div class="c-desc">自然场景中目标大小不一，小目标在深层网络中易丢失细节信息。</div>
+                </div>
+                <div class="c-right">
+                    <div class="s-title"><span class="icon">🏗️</span> 多尺度金字塔结构</div>
+                    <div class="s-desc">采用特征金字塔（FPN）与自适应跳过连接，融合深层语义与浅层细节，确保各尺度目标均可被捕获。</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">5 / 13</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 6: slide5.html -->
+        <div class="slide-page" id="slide-6">
+            <style>
+#slide-6 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-6 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-6 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-6 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+#slide-6 .content-wrapper { display: flex; gap: 40px; height: 520px; }
+#slide-6 .left-panel { flex: 1.1; }
+#slide-6 .right-panel { 
+            flex: 0.9; 
+            background: #f8f9fa; 
+            border-radius: 12px; 
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+        }
+#slide-6 .scheme-badge {
+            display: inline-block; background: #0056b3; color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px; margin-bottom: 10px;
+        }
+#slide-6 .scheme-title { font-size: 24px; font-weight: 700; color: #212529; margin-bottom: 20px; }
+#slide-6 .motivation-box {
+            background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 15px; margin-bottom: 20px; border-radius: 0 4px 4px 0;
+        }
+#slide-6 .motivation-title { font-size: 16px; font-weight: 700; color: #856404; margin-bottom: 4px; display: flex; align-items: center; }
+#slide-6 .motivation-text { font-size: 15px; color: #856404; line-height: 1.4; }
+#slide-6 .feature-box {
+            margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #00a651;
+        }
+#slide-6 .feature-name { font-size: 18px; font-weight: 600; color: #343a40; margin-bottom: 4px; }
+#slide-6 .feature-detail { font-size: 15px; color: #6c757d; line-height: 1.4; text-align: justify; }
+#slide-6 .diagram-placeholder {
+            width: 100%; height: 340px;
+            background: white;
+            border-radius: 8px;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            margin-bottom: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+#slide-6 .diagram-caption { font-size: 14px; color: #6c757d; text-align: center; }
+#slide-6 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-6 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">3.1 研究内容与方案 (1/3)</div>
+
+        <div class="content-wrapper">
+            <div class="left-panel">
+                <div class="scheme-badge">方案一</div>
+                <div class="scheme-title">AMS-Counter: 空间-频域多视角融合</div>
+                
+                <div class="motivation-box">
+                    <div class="motivation-title">💡 Motivation / 动机</div>
+                    <div class="motivation-text">
+                        传统CNN仅在空间域提取特征，受限于局部感受野，难以捕捉密集场景的全局密度分布。复杂背景（如树木、阴影）易导致特征混淆。引入<strong>频域信息（Frequency Domain）</strong>可提供对噪声鲁棒的全局上下文视角。
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-name">多视角特征融合模块 (AMFFM)</div>
+                    <div class="feature-detail">
+                        构建双流架构，并行提取空间域的纹理细节与频域的幅度/相位谱特征。通过交叉注意力机制实现互补信息的深度融合，显著提升特征的判别力。
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-name">无偏快速傅里叶卷积 (UFFC)</div>
+                    <div class="feature-detail">
+                        基于FFT实现频谱卷积，利用其全局感受野特性捕捉图像的周期性密度模式，有效克服局部卷积在极高密度区域的“视野盲区”问题。
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-name">自适应跳过连接 (ASC)</div>
+                    <div class="feature-detail">
+                        引入可学习的门控机制，动态调节深层语义特征与浅层细节特征的融合比例，解决小目标在深层网络中信息丢失的问题。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="diagram-placeholder">
+                    <img src="slides/images/ams.png" style="width:90%; height:auto;" alt="Neural Network Structure">
+                </div>
+                <div class="diagram-caption">图：AMS-Counter 基础网络架构示意</div>
+            </div>
+        </div>
+        
+        <div class="footer">5 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 7: slide6.html -->
+        <div class="slide-page" id="slide-7">
+            <style>
+#slide-7 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-7 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-7 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-7 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+#slide-7 .content-wrapper { display: flex; gap: 40px; height: 520px; }
+#slide-7 .left-panel { flex: 1.1; }
+#slide-7 .right-panel { 
+            flex: 0.9; 
+            background: #f8f9fa; 
+            border-radius: 12px; 
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+        }
+#slide-7 .scheme-badge {
+            display: inline-block; background: #6f42c1; color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px; margin-bottom: 10px;
+        }
+#slide-7 .scheme-title { font-size: 24px; font-weight: 700; color: #212529; margin-bottom: 20px; }
+#slide-7 .motivation-box {
+            background-color: rgba(111, 66, 193, 0.15); 
+            border-left: 4px solid #6f42c1;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+#slide-7 .motivation-title { font-size: 16px; font-weight: 700; color: #563d7c; margin-bottom: 4px; display: flex; align-items: center; }
+#slide-7 .motivation-text { font-size: 15px; color: #343a40; line-height: 1.4; }
+#slide-7 .feature-box {
+            margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #6f42c1;
+        }
+#slide-7 .feature-name { font-size: 18px; font-weight: 600; color: #343a40; margin-bottom: 3px; }
+#slide-7 .feature-detail { font-size: 15px; color: #6c757d; line-height: 1.35; }
+#slide-7 .diagram-placeholder {
+            width: 100%; height: 320px;
+            background: white;
+            border-radius: 8px;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+#slide-7 .diagram-caption { font-size: 14px; color: #6c757d; text-align: center; }
+#slide-7 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-7 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">3.2 研究内容与方案 (2/3)</div>
+
+        <div class="content-wrapper">
+            <div class="left-panel">
+                <div class="scheme-badge">方案二</div>
+                <div class="scheme-title">PolaCount: 金字塔极性感知跨模态注意力</div>
+                
+                <div class="motivation-box">
+                    <div class="motivation-title">💡 Motivation / 动机</div>
+                    <div class="motivation-text">
+                        现有零样本计数模型存在严重的语义对齐偏差，常将背景误判为目标。且自然场景中目标尺度变化剧烈（Scale Variation）。需要引入<strong>正负样本对比（极性）</strong>来锐化语义边界，并结合<strong>金字塔结构</strong>适应多尺度。
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-name">极性感知相似度计算</div>
+                    <div class="feature-detail">
+                        创新引入“正向”（目标）与“负向”（背景）文本提示对。利用对比学习思想，抑制与负向提示相似的图像区域，最大化正向区域的响应，显著降低误检率。
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-name">双向交叉注意力机制</div>
+                    <div class="feature-detail">
+                        摒弃单向的文本引导模式，构建视觉到文本、文本到视觉的双向信息流。确保视觉特征能精准对齐到特定的语义描述，实现细粒度的跨模态交互。
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-name">金字塔多尺度级联结构</div>
+                    <div class="feature-detail">
+                        采用特征金字塔网络（FPN）思想，在不同分辨率层级上逐级预测密度图。从深层的高级语义定位到浅层的高分辨率修正，精确捕获各种尺度的目标。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="diagram-placeholder">
+                     <img src="slides/images/pola.png" style="width:90%; height:auto;" alt="Attention Mechanism">
+                </div>
+                <div class="diagram-caption">图：PolaCount 跨模态交互架构示意</div>
+            </div>
+        </div>
+        
+        <div class="footer">6 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 8: slide_experiment.html -->
+        <div class="slide-page" id="slide-8">
+            <style>
+#slide-8 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-8 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-8 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-8 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+#slide-8 .content-flex {
+            display: flex;
+            gap: 40px;
+            height: 520px;
+        }
+#slide-8 .left-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+#slide-8 .right-col {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #dee2e6;
+        }
+#slide-8 .data-card {
+            background: #fff;
+            border-left: 5px solid #0056b3;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+#slide-8 .d-title { font-size: 20px; font-weight: 700; color: #212529; margin-bottom: 10px; }
+#slide-8 .d-info { font-size: 16px; color: #6c757d; margin-bottom: 5px; }
+#slide-8 .d-badge {
+            display: inline-block; background: #e7f5ff; color: #0056b3; padding: 2px 8px; border-radius: 4px; font-size: 14px; font-weight: 600; margin-right: 5px;
+        }
+#slide-8 .metric-box {
+            margin-bottom: 30px;
+        }
+#slide-8 .m-header { font-size: 22px; font-weight: 700; color: #343a40; margin-bottom: 15px; border-bottom: 1px solid #dee2e6; padding-bottom: 10px; }
+#slide-8 .formula-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px dashed #adb5bd;
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+        }
+#slide-8 .metric-desc {
+            font-size: 16px; color: #495057; line-height: 1.5;
+        }
+#slide-8 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-8 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">3.3 实验设置与评估体系</div>
+
+        <div class="content-flex">
+            <!-- Left: Datasets -->
+            <div class="left-col">
+                <div class="m-header" style="border:none; padding:0; margin-bottom:5px;">📚 实验数据集</div>
+                
+                <div class="data-card">
+                    <div class="d-title">FSC-147 (Few-Shot Counting)</div>
+                    <div class="d-info"><span class="d-badge">核心</span> 包含147个类别，6135张图像。</div>
+                    <div class="d-info">特点：类别丰富，跨度大，专为少样本/零样本设计。</div>
+                </div>
+
+                <div class="data-card" style="border-left-color: #17a2b8;">
+                    <div class="d-title">CARPK (Car Parking Lot)</div>
+                    <div class="d-info"><span class="d-badge">泛化</span> 包含近90,000辆汽车的航拍图像。</div>
+                    <div class="d-info">用途：验证模型在特定密集场景下的跨域泛化能力。</div>
+                </div>
+
+                <div class="data-card" style="border-left-color: #6f42c1;">
+                    <div class="d-title">ShanghaiTech (Crowd Counting)</div>
+                    <div class="d-info"><span class="d-badge">挑战</span> 高密度人群计数数据集。</div>
+                    <div class="d-info">用途：测试模型在极端拥挤场景下的鲁棒性。</div>
+                </div>
+            </div>
+
+            <!-- Right: Metrics -->
+            <div class="right-col">
+                <div class="metric-box">
+                    <div class="m-header">📏 评估指标</div>
+                    
+                    <div style="font-weight:600; margin-bottom:10px; color:#212529;">1. 平均绝对误差 (MAE)</div>
+                    <div class="formula-box">
+                        MAE = (1/N) * Σ | P_i - G_i |
+                    </div>
+                    <div class="metric-desc">衡量预测值与真实值之间的平均偏差，反映计数的准确性。</div>
+                </div>
+
+                <div class="metric-box">
+                    <div style="font-weight:600; margin-bottom:10px; color:#212529;">2. 均方根误差 (RMSE)</div>
+                    <div class="formula-box">
+                        RMSE = √ [ (1/N) * Σ (P_i - G_i)^2 ]
+                    </div>
+                    <div class="metric-desc">对大误差更敏感，反映计数的稳定性与鲁棒性。</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">8 / 13</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 9: slide7.html -->
+        <div class="slide-page" id="slide-9">
+            <style>
+#slide-9 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-9 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-9 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-9 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 20px; border-bottom: 2px solid #e9ecef; padding-bottom: 10px; }
+#slide-9 .route-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+#slide-9 .phase-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+#slide-9 .phase-box {
+            width: 220px;
+            height: 80px;
+            background: #f8f9fa;
+            border: 2px solid #0056b3;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #343a40;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            z-index: 2;
+        }
+#slide-9 .arrow-down {
+            width: 0; height: 0; 
+            border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 12px solid #adb5bd;
+            margin: 8px 0;
+        }
+#slide-9 .phase-label {
+            font-size: 14px; color: #6c757d; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px;
+        }
+#slide-9 .parallel-container {
+            display: flex; gap: 40px;
+        }
+#slide-9 .parallel-box {
+             width: 220px; height: 100px;
+             background: #e7f5ff; border: 2px dashed #0056b3;
+             border-radius: 8px;
+             padding: 10px;
+             font-size: 15px;
+             display: flex; flex-direction: column; justify-content: center; text-align: center;
+        }
+#slide-9 .p-title { font-weight: 700; margin-bottom: 4px; color: #0056b3; }
+#slide-9 .feasibility {
+            margin-top: 25px;
+            background: #fff3cd;
+            padding: 12px;
+            border-radius: 8px;
+            width: 90%;
+            text-align: center;
+            font-size: 16px;
+            color: #856404;
+        }
+#slide-9 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-9 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">4. 技术路线与实施</div>
+
+        <div style="display:flex; flex-direction:column; align-items:center;">
+            
+            <div class="phase-label">第一阶段：准备</div>
+            <div class="phase-box">基线模型复现<br>& 数据集构建</div>
+            <div class="arrow-down"></div>
+
+            <div class="phase-label">第二阶段：核心算法研发（并行）</div>
+            <div class="parallel-container">
+                <div class="parallel-box">
+                    <div class="p-title">AMS-Counter</div>
+                    空间-频域特征融合<br>无偏FFT卷积
+                </div>
+                <div class="parallel-box">
+                    <div class="p-title">PolaCount</div>
+                    极性感知注意力<br>跨模态对齐
+                </div>
+            </div>
+            
+            <div class="parallel-arrows">
+                <div class="arrow-wrapper"><div class="arrow-down"></div></div>
+                <div class="arrow-wrapper"><div class="arrow-down"></div></div>
+            </div>
+
+            <div class="phase-label">第三阶段：优化与验证（独立）</div>
+            <div class="parallel-container">
+                <div class="parallel-box" style="background:#f8f9fa; border:2px solid #0056b3; border-style:solid;">
+                    <div class="p-title" style="color:#343a40">实验 I</div>
+                    零样本泛化测试<br>空间-频域协同的有效性验证
+                </div>
+                <div class="parallel-box" style="background:#f8f9fa; border:2px solid #0056b3; border-style:solid;">
+                    <div class="p-title" style="color:#343a40">实验 II</div>
+                    零样本泛化测试<br>极性感知的有效性验证
+                </div>
+            </div>
+            
+            <div class="feasibility">
+                <strong>可行性保障：</strong> 完备的GPU计算资源 + 成熟的PyTorch框架 + 已验证的CLIP预训练模型
+            </div>
+
+        </div>
+        
+        <div class="footer">7 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 10: slide8.html -->
+        <div class="slide-page" id="slide-10">
+            <style>
+#slide-10 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-10 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-10 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-10 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 40px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+#slide-10 .columns { display: flex; gap: 40px; height: 480px; }
+#slide-10 .col {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+#slide-10 .col-header {
+            font-size: 28px; font-weight: 700; color: #212529; margin-bottom: 25px;
+            display: flex; align-items: center;
+        }
+#slide-10 .icon-box {
+            width: 40px; height: 40px; background: #0056b3; color: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 20px;
+        }
+#slide-10 .list-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+#slide-10 .bullet {
+            min-width: 10px; height: 10px; background: #00a651; border-radius: 50%; margin-top: 8px; margin-right: 15px;
+        }
+#slide-10 .text { font-size: 20px; color: #495057; line-height: 1.4; }
+#slide-10 .highlight { color: #0056b3; font-weight: 600; }
+#slide-10 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-10 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">5. 预期成果与创新点</div>
+
+        <div class="columns">
+            <div class="col">
+                <div class="col-header">
+                    <div class="icon-box">★</div>
+                    主要创新点
+                </div>
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="text">提出<span class="highlight">空间-频率域协同</span>机制，突破单一视角特征提取的局限性。</div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="text">设计<span class="highlight">极性感知双向注意力</span>，解决零样本计数中的定位漂移问题。</div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="text">构建<span class="highlight">渐进式训练策略</span>，显著提升模型在少样本/零样本场景下的收敛速度。</div>
+                </div>
+            </div>
+
+            <div class="col" style="background: #e3f2fd;">
+                <div class="col-header">
+                    <div class="icon-box" style="background:#00a651;">✓</div>
+                    预期成果
+                </div>
+                <div class="list-item">
+                    <div class="bullet" style="background:#0056b3;"></div>
+                    <div class="text">构建基于多视角融合的零样本计数框架 (AMS-Counter / PolaCount)。</div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet" style="background:#0056b3;"></div>
+                    <div class="text">发表高水平学术论文 2-2 篇 (CCF推荐会议/期刊)。</div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet" style="background:#0056b3;"></div>
+                    <div class="text">申请国家发明专利 2 项。</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">8 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 11: slide9.html -->
+        <div class="slide-page" id="slide-11">
+            <style>
+#slide-11 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-11 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-11 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-11 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 40px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+#slide-11 .grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; height: 480px;
+        }
+#slide-11 .section {
+            display: flex; flex-direction: column;
+        }
+#slide-11 .sec-title { font-size: 24px; font-weight: 700; color: #212529; margin-bottom: 20px; border-left: 5px solid #0056b3; padding-left: 15px; }
+#slide-11 .paper-card {
+            background: #fff; border: 1px solid #dee2e6; padding: 20px; border-radius: 8px; margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+#slide-11 .paper-title { font-weight: 600; color: #343a40; font-size: 18px; margin-bottom: 5px; }
+#slide-11 .paper-meta { color: #868e96; font-size: 14px; }
+#slide-11 .env-list {
+            background: #f8f9fa; padding: 25px; border-radius: 8px;
+        }
+#slide-11 .env-item { font-size: 18px; color: #495057; margin-bottom: 15px; display: flex; align-items: center; }
+#slide-11 .env-icon { margin-right: 15px; font-size: 20px; }
+#slide-11 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-11 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">6. 研究基础与条件</div>
+
+        <div class="grid">
+            <div class="section">
+                <div class="sec-title">前期研究基础</div>
+                <div class="paper-card">
+                    <div class="paper-title">"AMS-Counter: Text-Guided Zero-shot Object Counting via Adaptive Multi-view Similarity-map"</div>
+                    <div class="paper-meta">Accepted at ICME 2025 (CCF-B)，支撑研究内容1。</div>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">PolaCount: Text-specified zero-shot object counting with pyramid polarity-aware cross-attention</div>
+                    <div class="paper-meta">Accepted in Neurocomputing (SCI JCR-Q1, CCF-C)，支撑研究内容2。</div>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">文献调研与代码库</div>
+                    <div class="paper-meta">已完成30+篇核心文献阅读，复现了CLIP-Count基线代码。</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="sec-title">实验环境与数据</div>
+                <div class="env-list">
+                    <div class="env-item">
+                        <span class="env-icon">🖥️</span>
+                        <div><strong>硬件平台：</strong> NVIDIA RTX 4090 / A100 服务器</div>
+                    </div>
+                    <div class="env-item">
+                        <span class="env-icon">🛠️</span>
+                        <div><strong>软件框架：</strong> PyTorch, OpenCV, HuggingFace Transformers</div>
+                    </div>
+                    <div class="env-item">
+                        <span class="env-icon">📊</span>
+                        <div><strong>数据集：</strong> FSC-147, CARPK, ShanghaiTech (已准备完毕)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">9 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 12: slide10.html -->
+        <div class="slide-page" id="slide-12">
+            <style>
+#slide-12 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-12 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+#slide-12 .top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #0056b3; }
+#slide-12 .slide-title { font-size: 36px; font-weight: 700; color: #0056b3; margin-bottom: 60px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px; }
+#slide-12 .timeline {
+            position: relative;
+            margin-top: 50px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+        }
+#slide-12 .line {
+            position: absolute; left: 0; right: 0; top: 50%; height: 4px; background: #dee2e6; z-index: 1;
+        }
+#slide-12 .nodes {
+            display: flex; justify-content: space-between; width: 100%; position: relative; z-index: 2;
+        }
+#slide-12 .node {
+            display: flex; flex-direction: column; align-items: center; width: 180px;
+        }
+#slide-12 .dot {
+            width: 24px; height: 24px; background: #0056b3; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 3px #0056b3;
+            margin-bottom: 20px;
+        }
+#slide-12 .date { font-weight: 700; color: #0056b3; font-size: 20px; margin-bottom: 10px; }
+#slide-12 .task-box {
+            background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;
+            border: 1px solid #e9ecef; width: 100%; font-size: 16px; color: #495057;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+#slide-12 .footer { position: absolute; bottom: 20px; right: 40px; color: #adb5bd; font-size: 14px; }
+#slide-12 .cqu-logo {
+            position: absolute;
+            top: 45px;
+            right: 60px;
+            width: 160px;
+            z-index: 10;
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="top-bar"></div>
+        <div class="slide-title">7. 年度研究计划</div>
+
+        <div class="timeline">
+            <div class="line"></div>
+            
+            <div class="nodes">
+                <div class="node">
+                    <div class="date">2026.1-3</div>
+                    <div class="dot"></div>
+                    <div class="task-box">基线复现<br>数据准备</div>
+                </div>
+                
+                <div class="node">
+                    <div class="date">2026.4-8</div>
+                    <div class="dot"></div>
+                    <div class="task-box">核心算法<br>研发与优化</div>
+                </div>
+                
+                <div class="node">
+                    <div class="date">2026.9-12</div>
+                    <div class="dot"></div>
+                    <div class="task-box">系统实验<br>论文撰写</div>
+                </div>
+                
+                <div class="node">
+                    <div class="date">2027.1-2</div>
+                    <div class="dot"></div>
+                    <div class="task-box">论文投稿<br>初稿修改</div>
+                </div>
+                
+                <div class="node">
+                    <div class="date">2027.3-4</div>
+                    <div class="dot"></div>
+                    <div class="task-box">学位论文<br>答辩准备</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">10 / 11</div>
+    </div>
+
+        </div>
+
+        <!-- Slide 13: slide11.html -->
+        <div class="slide-page" id="slide-13">
+            <style>
+#slide-13 { margin: 0; padding: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#slide-13 .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #0056b3;
+            position: relative;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.95)), url('slides/images/abstract-blue-technology-network-background.jpg');
+            background-size: cover;
+        }
+#slide-13 .end-title { font-size: 64px; font-weight: 700; margin-bottom: 30px; letter-spacing: 2px; }
+#slide-13 .end-subtitle { font-size: 28px; font-weight: 300; opacity: 0.9; margin-bottom: 60px; }
+#slide-13 .contact-info {
+            font-size: 20px; font-weight: 300; line-height: 1.6;
+        }
+#slide-13 .cqu-logo {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            width: 260px;
+            z-index: 10;
+            filter: brightness(0) invert(1); 
+        }
+
+            </style>
+            
+    <div class="slide-container">
+        <img src="slides/images/cqu.png" class="cqu-logo" alt="CQU Logo">
+        <div class="end-title">敬请各位老师批评指正</div>
+        <div class="end-subtitle">THANKS FOR YOUR ATTENTION</div>
+        
+        <div class="contact-info">
+            汇报人：钱城<br>
+            2026年1月
+        </div>
+    </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
