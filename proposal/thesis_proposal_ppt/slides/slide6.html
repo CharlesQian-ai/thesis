@@ -33,23 +33,33 @@
         }
         
         .scheme-badge {
-            display: inline-block; background: #6f42c1; color: white; padding: 5px 15px; border-radius: 20px; font-size: 16px; margin-bottom: 15px;
+            display: inline-block; background: #6f42c1; color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px; margin-bottom: 10px;
         }
-        .scheme-title { font-size: 28px; font-weight: 700; color: #212529; margin-bottom: 30px; }
+        .scheme-title { font-size: 24px; font-weight: 700; color: #212529; margin-bottom: 20px; }
         
-        .feature-box {
-            margin-bottom: 25px; padding-left: 20px; border-left: 4px solid #6f42c1;
+        .motivation-box {
+            background-color: rgba(111, 66, 193, 0.15); /* 增加不透明度以增强底色 */
+            border-left: 4px solid #6f42c1;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
         }
-        .feature-name { font-size: 22px; font-weight: 600; color: #343a40; margin-bottom: 5px; }
-        .feature-detail { font-size: 18px; color: #6c757d; line-height: 1.4; }
+        .motivation-title { font-size: 16px; font-weight: 700; color: #563d7c; margin-bottom: 4px; display: flex; align-items: center; }
+        .motivation-text { font-size: 15px; color: #343a40; line-height: 1.4; }
+
+        .feature-box {
+            margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #6f42c1;
+        }
+        .feature-name { font-size: 18px; font-weight: 600; color: #343a40; margin-bottom: 3px; }
+        .feature-detail { font-size: 15px; color: #6c757d; line-height: 1.35; }
         
         .diagram-placeholder {
-            width: 100%; height: 300px;
+            width: 100%; height: 320px;
             background: white;
             border-radius: 8px;
             display: flex; flex-direction: column;
             align-items: center; justify-content: center;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             overflow: hidden;
         }
         .diagram-caption { font-size: 14px; color: #6c757d; text-align: center; }
@@ -75,24 +85,31 @@
                 <div class="scheme-badge">方案二</div>
                 <div class="scheme-title">PolaCount: 金字塔极性感知跨模态注意力</div>
                 
+                <div class="motivation-box">
+                    <div class="motivation-title">💡 Motivation / 动机</div>
+                    <div class="motivation-text">
+                        现有零样本计数模型存在严重的语义对齐偏差，常将背景误判为目标。且自然场景中目标尺度变化剧烈（Scale Variation）。需要引入<strong>正负样本对比（极性）</strong>来锐化语义边界，并结合<strong>金字塔结构</strong>适应多尺度。
+                    </div>
+                </div>
+
                 <div class="feature-box">
                     <div class="feature-name">极性感知相似度计算</div>
                     <div class="feature-detail">
-                        引入正负样本对比机制，抑制背景噪声干扰，强化模型对文本描述目标的定位准确性。
+                        创新引入“正向”（目标）与“负向”（背景）文本提示对。利用对比学习思想，抑制与负向提示相似的图像区域，最大化正向区域的响应，显著降低误检率。
                     </div>
                 </div>
                 
                 <div class="feature-box">
                     <div class="feature-name">双向交叉注意力机制</div>
                     <div class="feature-detail">
-                        构建图像到文本、文本到图像的双向信息流，实现视觉特征与语义特征的深度对齐。
+                        摒弃单向的文本引导模式，构建视觉到文本、文本到视觉的双向信息流。确保视觉特征能精准对齐到特定的语义描述，实现细粒度的跨模态交互。
                     </div>
                 </div>
                 
                 <div class="feature-box">
                     <div class="feature-name">金字塔多尺度级联结构</div>
                     <div class="feature-detail">
-                        在不同特征层级进行逐步细化预测，解决目标尺度变化剧烈带来的计数误差。
+                        采用特征金字塔网络（FPN）思想，在不同分辨率层级上逐级预测密度图。从深层的高级语义定位到浅层的高分辨率修正，精确捕获各种尺度的目标。
                     </div>
                 </div>
             </div>

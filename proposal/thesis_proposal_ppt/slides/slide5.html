@@ -33,24 +33,31 @@
         }
         
         .scheme-badge {
-            display: inline-block; background: #0056b3; color: white; padding: 5px 15px; border-radius: 20px; font-size: 16px; margin-bottom: 15px;
+            display: inline-block; background: #0056b3; color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px; margin-bottom: 10px;
         }
-        .scheme-title { font-size: 28px; font-weight: 700; color: #212529; margin-bottom: 30px; }
+        .scheme-title { font-size: 24px; font-weight: 700; color: #212529; margin-bottom: 20px; }
         
-        .feature-box {
-            margin-bottom: 25px; padding-left: 20px; border-left: 4px solid #00a651;
+        .motivation-box {
+            background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 15px; margin-bottom: 20px; border-radius: 0 4px 4px 0;
         }
-        .feature-name { font-size: 22px; font-weight: 600; color: #343a40; margin-bottom: 5px; }
-        .feature-detail { font-size: 18px; color: #6c757d; line-height: 1.4; }
+        .motivation-title { font-size: 16px; font-weight: 700; color: #856404; margin-bottom: 4px; display: flex; align-items: center; }
+        .motivation-text { font-size: 15px; color: #856404; line-height: 1.4; }
+
+        .feature-box {
+            margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #00a651;
+        }
+        .feature-name { font-size: 18px; font-weight: 600; color: #343a40; margin-bottom: 4px; }
+        .feature-detail { font-size: 15px; color: #6c757d; line-height: 1.4; text-align: justify; }
         
         .diagram-placeholder {
-            width: 100%; height: 300px;
+            width: 100%; height: 340px;
             background: white;
             border-radius: 8px;
             display: flex; flex-direction: column;
             align-items: center; justify-content: center;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .diagram-caption { font-size: 14px; color: #6c757d; text-align: center; }
         
@@ -73,26 +80,33 @@
         <div class="content-wrapper">
             <div class="left-panel">
                 <div class="scheme-badge">方案一</div>
-                <div class="scheme-title">AMS-Counter: 空间-频率域多视角融合</div>
+                <div class="scheme-title">AMS-Counter: 空间-频域多视角融合</div>
                 
+                <div class="motivation-box">
+                    <div class="motivation-title">💡 Motivation / 动机</div>
+                    <div class="motivation-text">
+                        传统CNN仅在空间域提取特征，受限于局部感受野，难以捕捉密集场景的全局密度分布。复杂背景（如树木、阴影）易导致特征混淆。引入<strong>频域信息（Frequency Domain）</strong>可提供对噪声鲁棒的全局上下文视角。
+                    </div>
+                </div>
+
                 <div class="feature-box">
                     <div class="feature-name">多视角特征融合模块 (AMFFM)</div>
                     <div class="feature-detail">
-                        同时提取图像的空间域纹理特征与频率域频谱特征，解决复杂背景下的目标混淆问题。
+                        构建双流架构，并行提取空间域的纹理细节与频域的幅度/相位谱特征。通过交叉注意力机制实现互补信息的深度融合，显著提升特征的判别力。
                     </div>
                 </div>
                 
                 <div class="feature-box">
                     <div class="feature-name">无偏快速傅里叶卷积 (UFFC)</div>
                     <div class="feature-detail">
-                        利用FFT全局感受野特性，捕捉全局密度分布，克服局部卷积在密集场景下的局限性。
+                        基于FFT实现频谱卷积，利用其全局感受野特性捕捉图像的周期性密度模式，有效克服局部卷积在极高密度区域的“视野盲区”问题。
                     </div>
                 </div>
                 
                 <div class="feature-box">
                     <div class="feature-name">自适应跳过连接 (ASC)</div>
                     <div class="feature-detail">
-                        动态调节深层语义与浅层细节的融合比例，增强对小目标的感知能力。
+                        引入可学习的门控机制，动态调节深层语义特征与浅层细节特征的融合比例，解决小目标在深层网络中信息丢失的问题。
                     </div>
                 </div>
             </div>
