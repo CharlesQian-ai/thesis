@@ -1,11 +1,7 @@
 import fitz  # PyMuPDF
 from pptx import Presentation
-from pptx.util import Inches, Cm
+from pptx.util import Inches
 import os
-
-# 配置路径
-PDF_PATH = r"d:\Projects\开题答辩PPT\proposal\docs\开题答辩PPT.pdf"
-OUTPUT_PPT_PATH = r"d:\Projects\开题答辩PPT\proposal\docs\开题答辩PPT.pptx"
 
 def convert_pdf_to_ppt(pdf_path, ppt_path):
     print(f"Opening PDF: {pdf_path}")
@@ -27,11 +23,11 @@ def convert_pdf_to_ppt(pdf_path, ppt_path):
     print(f"Total pages: {len(doc)}")
 
     for page_num in range(len(doc)):
-        print(f"Processing page {page_num + 1}...")
+        # print(f"Processing page {page_num + 1}...")
         page = doc.load_page(page_num)
         
         # 将 PDF 页面转换为图片 (pixmap)
-        # matrix=fitz.Matrix(2, 2) 表示放大 2 倍，提高清晰度
+        # matrix=fitz.Matrix(3, 3) 表示放大 3 倍，提高清晰度
         pix = page.get_pixmap(matrix=fitz.Matrix(3, 3))
         
         image_path = f"temp_slide_{page_num}.png"
@@ -51,14 +47,22 @@ def convert_pdf_to_ppt(pdf_path, ppt_path):
         )
         
         # 删除临时图片
-        os.remove(image_path)
+        if os.path.exists(image_path):
+            os.remove(image_path)
 
+    # 确保输出目录存在
+    os.makedirs(os.path.dirname(ppt_path), exist_ok=True)
+    
     # 保存 PPT
     prs.save(ppt_path)
     print(f"Successfully saved PPT to: {ppt_path}")
 
 if __name__ == "__main__":
+    # 默认测试路径
+    PDF_PATH = r"d:\Projects\开题答辩PPT\proposal\docs\开题答辩PPT.pdf"
+    OUTPUT_PPT_PATH = r"d:\Projects\开题答辩PPT\proposal\docs\开题答辩PPT.pptx"
+    
     if os.path.exists(PDF_PATH):
         convert_pdf_to_ppt(PDF_PATH, OUTPUT_PPT_PATH)
     else:
-        print(f"Error: PDF file not found at {PDF_PATH}")
+        print(f"PDF not found: {PDF_PATH}")
